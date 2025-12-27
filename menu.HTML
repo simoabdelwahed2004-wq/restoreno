@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Restoreno Corner</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Background Video -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="VIDEO.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <header>
+    <h1 id="logo">Restoreno Corner</h1>
+    <nav>
+      <a href="index.html" data-key="home"><i class="fa fa-home"></i> <span class="nav-text">الرئيسية</span></a>
+      <a href="menu.html" data-key="menu"><i class="fa fa-utensils"></i> <span class="nav-text">القائمة</span></a>
+      <a href="contact.html" data-key="contact"><i class="fa fa-envelope"></i> <span class="nav-text">الاتصال</span></a>
+    </nav>
+    <div style="margin-left:auto;">
+      <button onclick="setLang('ar')">AR</button>
+      <button onclick="setLang('fr')">FR</button>
+    </div>
+  </header>
+
+  <section id="menu">
+    <h2 data-key="menuTitle">قائمة الطعام</h2>
+    <p data-key="menuNote">يمكنك الضغط على أي صنف لرؤية التفاصيل</p>
+
+    <!-- Plats principaux -->
+    <h3 class="category-title" data-key="catPlats">Plats principaux</h3>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="toggleDetails('mix')">
+        <img src="PLATS MIX.JPG" alt="Mix">
+        <h3 data-key="mixName">Mix</h3>
+        <p data-key="mixPrice">65 درهم</p>
+        <div class="menu-details" id="mix" style="display:none;">
+          <p data-key="mixMeat">اللحوم: دجاج / كفتة / تون / صوص مختلط</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('escalope')">
+        <img src="PLATS ESCALOP .JPG" alt="Escalope">
+        <h3 data-key="escalopeName">Escalope</h3>
+        <p data-key="escalopePrice">60 درهم</p>
+        <div class="menu-details" id="escalope" style="display:none;">
+          <p data-key="escalopeMeat">نوع اللحم: دجاج / لحم / صوص حسب الاختيار</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('dand')">
+        <img src="PLATS MIX.JPG" alt="Dand">
+        <h3 data-key="dandName">Dand</h3>
+        <p data-key="dandPrice">55 درهم</p>
+        <div class="menu-details" id="dand" style="display:none;">
+          <p data-key="dandMeat">اللحوم: دجاج / كفتة / تون</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('kafta')">
+        <img src="PLATS KFTA.jpg" alt="Kefta">
+        <h3 data-key="kaftaName">Kefta</h3>
+        <p data-key="kaftaPrice">55 درهم</p>
+        <div class="menu-details" id="kafta" style="display:none;">
+          <p data-key="kaftaMeat">اللحوم: كفتة / صوص حسب الاختيار</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('chawarma')">
+        <img src="P chawarma.JPG" alt="Chawarma">
+        <h3 data-key="chawarmaName">Chawarma</h3>
+        <p data-key="chawarmaPrice">60 درهم</p>
+        <div class="menu-details" id="chawarma" style="display:none;">
+          <p data-key="chawarmaMeat">اللحوم: دجاج / لحم / تون</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sandwiches -->
+    <h3 class="category-title" data-key="catSandwich">Sandwiches</h3>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="toggleDetails('sandwichDand')">
+        <img src="S DAND.JPG" alt="Dand Sandwich">
+        <h3 data-key="sandwichDandName">Dand</h3>
+        <p data-key="sandwichDandPrice">45 درهم</p>
+        <div class="menu-details" id="sandwichDand" style="display:none;">
+          <p data-key="sandwichDandMeat">اللحوم: دجاج / صوص حسب الاختيار</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('sandwichSosis')">
+        <img src="S SOSIS.JPG" alt="Sosis Sandwich">
+        <h3 data-key="sandwichSosisName">Sosis</h3>
+        <p data-key="sandwichSosisPrice">45 درهم</p>
+        <div class="menu-details" id="sandwichSosis" style="display:none;">
+          <p data-key="sandwichSosisMeat">اللحوم: صوص / تون / دجاج</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('sandwichTon')">
+        <img src="S THON.jpg" alt="Sandwich">
+        <h3 data-key="sandwichTonName">Ton</h3>
+        <p data-key="sandwichTonPrice">45 درهم</p>
+        <div class="menu-details" id="sandwichTon" style="display:none;">
+          <p data-key="sandwichTonMeat">المكونات: تون / صوص</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('sandwichKefta')">
+        <img src="S KFTA.JPG" alt="Sandwich">
+        <h3 data-key="sandwichKeftaName">Kefta</h3>
+        <p data-key="sandwichKeftaPrice">45 درهم</p>
+        <div class="menu-details" id="sandwichKefta" style="display:none;">
+          <p data-key="sandwichKeftaMeat">اللحوم: كفتة / صوص حسب الاختيار</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('sandwichMix')">
+        <img src="S MIX.jpg" alt="Sandwich">
+        <h3 data-key="sandwichMixName">Mix</h3>
+        <p data-key="sandwichMixPrice">50 درهم</p>
+        <div class="menu-details" id="sandwichMix" style="display:none;">
+          <p data-key="sandwichMixMeat">اللحوم: جميع الأصناف المختلطة</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paninis -->
+    <h3 class="category-title" data-key="catPanini">Paninis</h3>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="toggleDetails('paniniDand')">
+        <img src="S DAND.JPG" alt="Panini Dand">
+        <h3 data-key="paniniDandName">Dand</h3>
+        <p data-key="paniniDandPrice">50 درهم</p>
+        <div class="menu-details" id="paniniDand" style="display:none;">
+          <p data-key="paniniDandMeat">اللحوم: دجاج / صوص حسب الاختيار</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('paniniKefta')">
+        <img src="PA K.jpg" alt="Panini">
+        <h3 data-key="paniniKeftaName">Kefta</h3>
+        <p data-key="paniniKeftaPrice">50 درهم</p>
+        <div class="menu-details" id="paniniKefta" style="display:none;">
+          <p data-key="paniniKeftaMeat">اللحوم: كفتة / صوص حسب الاختيار</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('paniniSosis')">
+        <img src="PA  S.jpg" alt="Panini Sosis">
+        <h3 data-key="paniniSosisName">Sosis</h3>
+        <p data-key="paniniSosisPrice">50 درهم</p>
+        <div class="menu-details" id="paniniSosis" style="display:none;">
+          <p data-key="paniniSosisMeat">اللحوم: صوص / دجاج / تون</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('paniniEscalope')">
+        <img src="PA ES.jpg" alt="Panini">
+        <h3 data-key="paniniEscalopeName">Escalope</h3>
+        <p data-key="paniniEscalopePrice">55 درهم</p>
+        <div class="menu-details" id="paniniEscalope" style="display:none;">
+          <p data-key="paniniEscalopeMeat">اللحوم: دجاج / لحم / صوص حسب الاختيار</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('paniniMix')">
+        <img src="PA MIX.jpg" alt="Panini">
+        <h3 data-key="paniniMixName">Mix</h3>
+        <p data-key="paniniMixPrice">60 درهم</p>
+        <div class="menu-details" id="paniniMix" style="display:none;">
+          <p data-key="paniniMixMeat">اللحوم: جميع الأصناف المختلطة</p>
+        </div>
+      </div>
+
+      <div class="menu-item" onclick="toggleDetails('paniniTacos')">
+        <img src="tacos-de-poulet.jpeg" alt="Tacos Panini">
+        <h3 data-key="paniniTacosName">Tacos</h3>
+        <p data-key="paniniTacosPrice">60 درهم</p>
+        <div class="menu-details" id="paniniTacos" style="display:none;">
+          <p data-key="paniniTacosMeat">اللحوم: دجاج / كفتة / Sosis / Escalope / Mix</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pizza -->
+    <h3 class="category-title" data-key="catPizza">Pizza</h3>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="toggleDetails('pizza1')">
+        <img src="PIZZA M.jpg" alt="Pizza Margherita">
+        <h3 data-key="pizza1Name">Margherita</h3>
+        <p data-key="pizza1Price">70 درهم</p>
+        <div class="menu-details" id="pizza1" style="display:none;">
+          <p data-key="pizza1Desc">صلصة طماطم، جبن موزاريلا، ريحان</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleDetails('pizza2')">
+        <img src="PIZZA P.jpg" alt="Pizza">
+        <h3 data-key="pizza2Name">Pepperoni</h3>
+        <p data-key="pizza2Price">85 درهم</p>
+        <div class="menu-details" id="pizza2" style="display:none;">
+          <p data-key="pizza2Desc">صلصة طماطم، جبن موزاريلا، بيبروني</p>
+        </div>
+      </div>
+      <!-- يمكن إضافة باقي الأنواع بنفس الطريقة -->
+    </div>
+
+    <!-- Jus / Boissons -->
+    <h3 class="category-title" data-key="catJuice">Jus / Boissons</h3>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="toggleDetails('orangeJuice')">
+        <img src="J O.jpg" alt="Jus Orange">
+        <h3 data-key="orangeName">عصير برتقال</h3>
+        <p data-key="orangePrice">20 درهم</p>
+        <div class="menu-details" id="orangeJuice" style="display:none;">
+          <p data-key="orangeDesc">طازج وبارد</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleDetails('limonJuice')">
+        <img src="J C.JPG" alt="Jus">
+        <h3 data-key="limonName">عصير ليمون</h3>
+        <p data-key="limonPrice">20 درهم</p>
+        <div class="menu-details" id="limonJuice" style="display:none;">
+          <p data-key="limonDesc">طازج ومنعش</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleDetails('tfahJuice')">
+        <img src="J P.JPG" alt="Jus">
+        <h3 data-key="tfahName">عصير تفاح</h3>
+        <p data-key="tfahPrice">20 درهم</p>
+        <div class="menu-details" id="tfahJuice" style="display:none;">
+          <p data-key="tfahDesc">طازج وبارد</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleDetails('banaJuice')">
+        <img src="J B.JPG" alt="Jus">
+        <h3 data-key="banaName">عصير موز</h3>
+        <p data-key="banaPrice">20 درهم</p>
+        <div class="menu-details" id="banaJuice" style="display:none;">
+          <p data-key="banaDesc">طازج ومغذي</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <h3 class="category-title" data-key="catDessert">Desserts</h3>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="toggleDetails('tarte1')">
+        <img src="TART.jpg" alt="Tarte">
+        <h3 data-key="tarteName">تارت</h3>
+        <p data-key="tartePrice">35 درهم</p>
+        <div class="menu-details" id="tarte1" style="display:none;">
+          <p data-key="tarteDesc">مع حشوة الفواكه</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleDetails('glace1')">
+        <img src="GLAS.jpg" alt="Glace">
+        <h3 data-key="glaceName">آيس كريم</h3>
+        <p data-key="glacePrice">25 درهم</p>
+        <div class="menu-details" id="glace1" style="display:none;">
+          <p data-key="glaceDesc">نكهات متعددة: فانيليا، شوكولاتة، فراولة، Mix</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Café / Thé -->
+    <h3 class="category-title" data-key="catCoffee">Café / Thé</h3>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="toggleDetails('cafe1')">
+        <img src="CAFE T.jpg" alt="Café">
+        <h3 data-key="cafe1Name">قهوة</h3>
+        <p data-key="cafe1Price">15 درهم</p>
+        <div class="menu-details" id="cafe1" style="display:none;">
+          <p data-key="cafe1Desc">Espresso, Latte, Cappuccino</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleDetails('americano')">
+        <img src="CAFE A.jpg" alt="Americano">
+        <h3 data-key="americanoName">أميريكانو</h3>
+        <p data-key="americanoPrice">15 درهم</p>
+        <div class="menu-details" id="americano" style="display:none;">
+          <p data-key="americanoDesc">Espresso مع ماء ساخن</p>
+        </div>
+      </div>
+      <div class="menu-item" onclick="toggleDetails('mocha')">
+        <img src="CAFE MOCHA.jpg" alt="Mocha">
+        <h3 data-key="mochaName">موكا</h3>
+        <p data-key="mochaPrice">20 درهم</p>
+        <div class="menu-details" id="mocha" style="display:none;">
+          <p data-key="mochaDesc">Espresso مع شوكولاتة ساخنة</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <span data-key="footerCopyright">&copy; 2025 Restoreno Corner. جميع الحقوق محفوظة.</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

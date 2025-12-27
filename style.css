@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Video Background Styles */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-bg .video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* Dark overlay for readability */
+}
+
+body {
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Home Page Specific Background */
+.home-body {
+  background: url('RESTO.jpg') center center/cover no-repeat fixed;
+}
+
+.home-body .hero::before {
+  display: none;
+}
+
+.home-body .hero,
+.home-body .about,
+.home-body #preview-menu {
+  background: transparent !important;
+  /* No background frame */
+  color: white !important;
+  /* White text */
+  margin: 20px;
+  box-shadow: none;
+}
+
+.home-body h1,
+.home-body h2,
+.home-body p,
+.home-body span,
+.home-body i {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  /* Strong shadow for readability */
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+  background-size: cover;
+}
+
+header h1 {
+  margin-right: 20px;
+}
+
+header nav a {
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.hero {
+  background: #eee;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+.hero a {
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+}
+
+/* Menu Page Headers */
+#menu h2,
+#menu p,
+.category-title {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  /* Strong shadow for readability */
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  margin: 10px 0 5px;
+}
+
+.menu-item p {
+  margin: 5px 0;
+}
+
+.menu-details {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#contact h2,
+#contact label {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.contact-wrapper iframe {
+  flex: 1 1 300px;
+  min-height: 300px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.85;
+  /* Semi-transparent map */
+}
+
+.contact-form {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select,
+.contact-form button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  /* Transparent input background */
+  color: white;
+  /* White text */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form select option {
+  background: #333;
+  /* Dark background for dropdown options */
+  color: white;
+}
+
+.contact-form button {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+  margin-top: 20px;
+}
+
+.hero {
+  background: url('RESTO.jpg') center center/cover no-repeat;
+  width: 100%;
+  height: 100vh;
+  /* يغطي كامل ارتفاع الشاشة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* طبقة شفافة لتوضيح النصوص */
+  background-size: cover;
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background: #ff6600;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #e65c00;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Restoreno Corner</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Background Video -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="VIDEO 2.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <header>
+    <h1 id="logo">Restoreno Corner</h1>
+    <nav>
+      <a href="index.html" data-key="home"><i class="fa fa-home"></i> <span class="nav-text">الرئيسية</span></a>
+      <a href="menu.html" data-key="menu"><i class="fa fa-utensils"></i> <span class="nav-text">القائمة</span></a>
+      <a href="contact.html" data-key="contact"><i class="fa fa-envelope"></i> <span class="nav-text">الاتصال</span></a>
+    </nav>
+    <div style="margin-left:auto;">
+      <button onclick="setLang('ar')">AR</button>
+      <button onclick="setLang('fr')">FR</button>
+    </div>
+  </header>
+
+  <section id="contact">
+    <h2 id="contact-title">اتصل بنا</h2>
+    <div class="contact-wrapper">
+      <iframe src="https://maps.google.com/maps?q=marrakech&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen=""
+        loading="lazy"></iframe>
+      <form class="contact-form">
+        <input type="text" id="contact-name" placeholder="الاسم">
+        <input type="email" id="contact-email" placeholder="البريد الإلكتروني">
+        <textarea id="contact-message" placeholder="رسالتك"></textarea>
+        <input type="date" id="reservation-date" placeholder="اختر التاريخ">
+        <input type="time" id="reservation-time" placeholder="اختر الوقت">
+        <input type="number" id="reservation-persons" placeholder="عدد الأشخاص">
+        <label for="rating">تقييم:</label>
+        <select id="rating">
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆</option>
+        </select>
+        <button type="submit" id="contact-button">إرسال</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Restoreno Corner. جميع الحقوق محفوظة.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
